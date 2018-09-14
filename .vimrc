@@ -82,39 +82,5 @@ endfunction
 " ファイルと閉じずに実行結果を得る
 nmap ,e :!php %<CR>
 
-" vimgrep
-augroup grepopen
-  autocmd!
-  autocmd QuickfixCmdPost vimgrep cw
-augroup END
-
-" PHPLint 自動実行
-"augroup phpsyntaxcheck
-"  autocmd!
-"  autocmd BufWrite *.php w !php -l
-"augroup END
-
-" 対応する記号移動
-:source $VIMRUNTIME/macros/matchit.vim
-:let b:match_words = "if:endif,foreach:endforeach"
-
-" 折りたたみ保存
-autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
-autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif
-
-"emmetの設定
-"ctrl + e で展開
-let g:user_emmet_expandabbr_key = '<c-e>'
-
-set nocompatible
-filetype plugin on
-
-" netrwは常にtree view
-let g:netrw_liststyle = 3
-" 'v'でファイルを開くときは右側に開く。(デフォルトが左側なので入れ替え)
-let g:netrw_altv = 1
-" 'o'でファイルを開くときは下側に開く。(デフォルトが上側なので入れ替え)
-let g:netrw_alto = 1
-
 " Clipboard
 set clipboard=unnamed,autoselect
