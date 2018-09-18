@@ -84,3 +84,7 @@ nmap ,e :!php %<CR>
 
 " Clipboard
 set clipboard=unnamed,autoselect
+
+" buffer
+set hidden
+nnoremap <C-k> gF
