@@ -69,11 +69,6 @@ map <silent> sP :call YanktmpPaste_P()<CR>
 " PHP Lint
 nmap ,l :call PHPLint()<CR>
 
-""
-" PHPLint
-"
-" @author halt feits <halt.feits at gmail.com>
-"
 function PHPLint()
   let result = system( &ft . ' -l ' . bufname(""))
   echo result
