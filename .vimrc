@@ -84,13 +84,6 @@ set clipboard=unnamed,autoselect
 set hidden
 nnoremap <C-k> gF
 
-" NERDTree
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
 " Plugin
 call plug#begin('~/.vim/plugged')
-
-Plug 'scrooloose/nerdtree'
-
 call plug#end()
