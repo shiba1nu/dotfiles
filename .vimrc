@@ -86,4 +86,10 @@ nnoremap <C-k> gF
 
 " Plugin
 call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'previm/previm'
+Plug 'tyru/open-browser.vim'
+Plug 'tyru/caw.vim'
+Plug 'thinca/vim-quickrun'
 call plug#end()
