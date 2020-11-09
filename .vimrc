@@ -93,3 +93,11 @@ Plug 'tyru/open-browser.vim'
 Plug 'tyru/caw.vim'
 Plug 'thinca/vim-quickrun'
 call plug#end()
+
+
+" Key Bind
+"" fzf
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>g :GFiles?<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>r :Rg<CR>
