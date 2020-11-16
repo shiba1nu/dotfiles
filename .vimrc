@@ -101,3 +101,9 @@ nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>g :GFiles?<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>r :Rg<CR>
+let g:fzf_action = {
+    \ 'ctrl-t': 'tab split',
+    \ 'ctrl-s': 'split',
+    \ 'ctrl-v': 'vsplit'
+    \ }
+
