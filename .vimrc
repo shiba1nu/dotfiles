@@ -212,6 +212,9 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_enter = 0
 
+" ctags
+set tags=./tags,tags
+
 " dict
 autocmd FileType php :set dictionary=~/.vim/dict/php.dict
 inoremap ,d <C-x><C-k>
