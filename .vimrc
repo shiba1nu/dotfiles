@@ -83,6 +83,7 @@ Plug 'arnaud-lb/vim-php-namespace'
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-surround'
 Plug 'rayburgemeestre/phpfolding.vim'
+Plug 'machakann/vim-sandwich'
 
 " Plug 'yuki-yano/fern-preview.vim'
 " Plug 'maximbaz/lightline-ale'
