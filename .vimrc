@@ -139,6 +139,9 @@ nnoremap ,c :<C-u>CtrlP .<CR>
 nnoremap ,, :<C-u>CtrlPMRUFiles<CR>
 
 " Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 nnoremap <leader>a :tab split<CR>:Ack ""<Left>
 nnoremap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
 
