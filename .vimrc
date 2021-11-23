@@ -46,9 +46,10 @@ nnoremap <ESC><ESC> :nohl<CR>
 " インサートモードから抜ける
 inoremap <silent> jj <ESC>
 
-" Tabキーでタブ移動
+" タブ
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
+nnoremap ,q :<C-u>tabclose<CR>
 
 " Plugin
 call plug#begin()
@@ -60,7 +61,6 @@ Plug 'skanehira/preview-markdown.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/ctrlp-matchfuzzy'
 Plug 'mattn/ctrlp-launcher'
-Plug 'rking/ag.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
@@ -85,6 +85,7 @@ Plug 'tpope/vim-surround'
 Plug 'rayburgemeestre/phpfolding.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'tyru/eskk.vim'
+Plug 'mileszs/ack.vim'
 
 " Plug 'yuki-yano/fern-preview.vim'
 " Plug 'maximbaz/lightline-ale'
@@ -137,9 +138,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 nnoremap ,c :<C-u>CtrlP .<CR>
 nnoremap ,, :<C-u>CtrlPMRUFiles<CR>
 
-" Ag
-nnoremap ,g :<C-u>Ag 
-nnoremap ,cg :<C-u>Ag <C-r><C-w>
+" Ack
+nnoremap <leader>a :tab split<CR>:Ack ""<Left>
+nnoremap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
 
 " Quickrun
 let g:quickrun_config={'*': {'split': ''}}
