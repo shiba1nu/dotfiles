@@ -86,6 +86,7 @@ Plug 'rayburgemeestre/phpfolding.vim'
 Plug 'machakann/vim-sandwich'
 Plug 'tyru/eskk.vim'
 Plug 'mileszs/ack.vim'
+Plug 'vim-scripts/Align'
 
 " Plug 'yuki-yano/fern-preview.vim'
 " Plug 'maximbaz/lightline-ale'
