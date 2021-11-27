@@ -144,8 +144,8 @@ nnoremap ,, :<C-u>CtrlPMRUFiles<CR>
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-nnoremap <leader>a :tab split<CR>:Ack ""<Left>
-nnoremap <leader>A :tab split<CR>:Ack <C-r><C-w><CR>
+nnoremap ,a :tab split<CR>:Ack ""<Left>
+nnoremap ,ak :tab split<CR>:Ack <C-r><C-w><CR>
 
 " Quickrun
 let g:quickrun_config={'*': {'split': ''}}
