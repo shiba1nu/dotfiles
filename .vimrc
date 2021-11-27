@@ -88,6 +88,7 @@ Plug 'machakann/vim-sandwich'
 Plug 'tyru/eskk.vim'
 Plug 'mileszs/ack.vim'
 Plug 'vim-scripts/Align'
+Plug 'brooth/far.vim'
 
 " Plug 'yuki-yano/fern-preview.vim'
 " Plug 'maximbaz/lightline-ale'
@@ -146,6 +147,10 @@ if executable('ag')
 endif
 nnoremap ,a :tab split<CR>:Ack ""<Left>
 nnoremap ,ak :tab split<CR>:Ack <C-r><C-w><CR>
+
+" Far
+let g:far#source="ag"
+let g:far#window_layout="tab"
 
 " Quickrun
 let g:quickrun_config={'*': {'split': ''}}
