@@ -230,7 +230,10 @@ set tags=./tags,tags
 
 " dict
 autocmd FileType php :set dictionary=~/.vim/dict/php.dict
-inoremap ,d <C-x><C-k>
+set complete=.,w,b,u,t,i,k
+
+" 補完表示時のEnterで改行をしない
+inoremap <expr><CR> pumvisible() ? "<C-y>" : "<CR>"
 
 " vim-ref
 let g:ref_phpmanual_path = $HOME . '/.vim/ref/php-chunked-xhtml'
