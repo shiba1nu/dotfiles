@@ -21,6 +21,11 @@ cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-d> <Del>
 
+" Insert Mode時カーソル移動
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-l> <C-o>$
+
 " cursor shape
 let &t_ti .= "\e[1 q"
 let &t_SI .= "\e[5 q"
