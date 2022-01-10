@@ -78,7 +78,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'simeji/winresizer'
 Plug 'Yggdroot/indentLine'
-" Plug 'bronson/vim-trailing-whitespace'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'LeafCage/yankround.vim'
 Plug 'jsborjesson/vim-uppercase-sql'
@@ -94,6 +93,9 @@ Plug 'tyru/eskk.vim'
 Plug 'mileszs/ack.vim'
 Plug 'vim-scripts/Align'
 Plug 'brooth/far.vim'
+Plug 'zef/vim-cycle'
+Plug 'vim-denops/denops.vim'
+Plug 'monaqa/dps-dial.vim'
 
 " Plug 'yuki-yano/fern-preview.vim'
 " Plug 'maximbaz/lightline-ale'
@@ -204,10 +206,6 @@ nmap <C-n> <Plug>(yankround-next)
 " open-browser
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
-" nnoremap ,sp :<C-u>OpenBrowserSearch -php <C-r><C-w>
-" let g:openbrowser_search_engines = {
-"   \ 'php': 'https://www.php.net/manual/ja/function.{query}.php',
-"   \ }
 
 " previm-open
 nnoremap ,p :<C-u>PrevimOpen<CR>
@@ -268,9 +266,6 @@ iab err \Cake\Log\Log::write(LOG_ERR, );<ESC>F)
 iab errp \Cake\Log\Log::write(LOG_ERR, print_r(, true));<ESC>F,
 iab errv \Cake\Log\Log::write(LOG_ERR, var_export(, true));<ESC>F,
 
-" input mode
-inoremap <C-l> <C-r>=lexima#insmode#leave(1, '<LT>C-G>U<LT>RIGHT>')<CR>
-
 " search php.net
 function! s:search_phpnet() abort
     let searchWord = expand("<cword>")
@@ -285,3 +280,20 @@ nnoremap <silent> ,sp :SearchPhpnet<CR>
 
 " phpfolding
 let g:DisableAutoPHPFolding = 1
+
+" vim-php-namespace
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+
+" vim-cycle
+autocmd VimEnter * call AddCycleGroup('php', ['int', 'string', 'array', 'bool'])
+autocmd VimEnter * call AddCycleGroup('php', ['private', 'protected', 'public'])
+
+" dps-dial
+let g:dps_dial#augends#register#i = [ 'case' ]
+nmap gc "i<Plug>(dps-dial-increment)
+
