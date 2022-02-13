@@ -297,3 +297,4 @@ autocmd VimEnter * call AddCycleGroup('php', ['private', 'protected', 'public'])
 let g:dps_dial#augends#register#i = [ 'case' ]
 nmap gc "i<Plug>(dps-dial-increment)
 
+" 対応する開始/終了タグに移動                                                                                                                filetype plugin on                                                                                                                           runtime macros/matchit.vim
