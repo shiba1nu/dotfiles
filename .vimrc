@@ -189,8 +189,9 @@ let g:lightline = {
    \ }
 
 " vim-fugitive
-nnoremap ,gs :<C-u>Gstatus<CR>
+nnoremap ,gs :<C-u>Git<CR>
 nnoremap ,gd :<C-u>Gdiff<CR>
+nnoremap ,gb :<C-u>Git blame<CR>
 set diffopt+=vertical
 
 " yankRound
@@ -215,7 +216,7 @@ cabbrev fx %s/></>\r</g \| filetype indent on \| setf xml \| normal gg=G
 cabbrev fj %!jq '.'
 cabbrev ev e $MYVIMRC
 cabbrev mktag term ++close ctags -R -f tags
-cabbrev ws FixWhitespace
+cabbrev sw StripWhitespace
 cabbrev it IndentLinesToggle
 cabbrev ef EnablePHPFolds
 cabbrev df DisablePHPFolds
