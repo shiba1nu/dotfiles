@@ -96,6 +96,7 @@ Plug 'brooth/far.vim'
 Plug 'zef/vim-cycle'
 Plug 'vim-denops/denops.vim'
 Plug 'monaqa/dps-dial.vim'
+Plug 'mechatroner/rainbow_csv'
 
 " Plug 'yuki-yano/fern-preview.vim'
 " Plug 'maximbaz/lightline-ale'
