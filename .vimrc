@@ -55,6 +55,8 @@ inoremap <silent> jj <ESC>
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap ,q :<C-u>tabclose<CR>
+nnoremap <C-Left> :<C-u>-tabm<CR>
+nnoremap <C-Right> :<C-u>+tabm<CR>
 
 " Plugin
 call plug#begin()
