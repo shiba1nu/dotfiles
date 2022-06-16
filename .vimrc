@@ -99,6 +99,7 @@ Plug 'zef/vim-cycle'
 Plug 'vim-denops/denops.vim'
 Plug 'monaqa/dps-dial.vim'
 Plug 'mechatroner/rainbow_csv'
+plug 'airblade/vim-gitgutter'
 
 " Plug 'yuki-yano/fern-preview.vim'
 " Plug 'maximbaz/lightline-ale'
@@ -196,6 +197,24 @@ nnoremap ,gs :<C-u>Git<CR>
 nnoremap ,gd :<C-u>Gdiff<CR>
 nnoremap ,gb :<C-u>Git blame<CR>
 set diffopt+=vertical
+
+" vim-gitgutter
+" プレビューウィンドウをフローティングウィンドウ表示する
+let g:gitgutter_preview_win_floating = 1
+" g]で前の変更箇所へ移動する
+nnoremap g[ :GitGutterPrevHunk<CR>
+" g[で次の変更箇所へ移動する
+nnoremap g] :GitGutterNextHunk<CR>
+" ghでdiffをハイライトする
+nnoremap gh :GitGutterLineHighlightsToggle<CR>
+" gpでカーソル行のdiffを表示する
+nnoremap gp :GitGutterPreviewHunk<CR>
+" 記号の色を変更する
+highlight GitGutterAdd ctermfg=green
+highlight GitGutterChange ctermfg=blue
+highlight GitGutterDelete ctermfg=red
+" 反映時間を短くする
+set updatetime=100
 
 " yankRound
 nmap p <Plug>(yankround-p)
