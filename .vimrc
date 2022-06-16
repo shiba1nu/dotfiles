@@ -285,14 +285,6 @@ nnoremap <silent> ,sp :SearchPhpnet<CR>
 " phpfolding
 let g:DisableAutoPHPFolding = 1
 
-" vim-php-namespace
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    call feedkeys('a',  'n')
-endfunction
-autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
-
 " vim-cycle
 autocmd VimEnter * call AddCycleGroup('php', ['int', 'string', 'array', 'bool'])
 autocmd VimEnter * call AddCycleGroup('php', ['private', 'protected', 'public'])
