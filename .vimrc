@@ -86,7 +86,6 @@ Plug 'jsborjesson/vim-uppercase-sql'
 Plug 'thinca/vim-ref'
 Plug 'junegunn/vim-easy-align'
 Plug 'Rican7/php-doc-modded'
-Plug 'arnaud-lb/vim-php-namespace'
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-surround'
 Plug 'rayburgemeestre/phpfolding.vim'
@@ -306,14 +305,6 @@ nmap ga <Plug>(EasyAlign)
 inoremap <C-d> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-d> :call PhpDocSingle()<CR>
 vnoremap <C-d> :call PhpDocRange()<CR>
-
-" vim-php-namespace
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    call feedkeys('a',  'n')
-endfunction
-autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 
 " iabbrev
 iab debug \Cake\Log\Log::write(LOG_DEBUG, );<ESC>F)
