@@ -77,7 +77,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tomasiser/vim-code-dark'
 Plug 'itchyny/lightline.vim'
-Plug 'dense-analysis/ale'
 Plug 'simeji/winresizer'
 Plug 'Yggdroot/indentLine'
 Plug 'ntpeters/vim-better-whitespace'
@@ -278,11 +277,6 @@ cabbrev df DisablePHPFolds
 
 " indentLine
 let g:indentLine_char = '|'
-
-" ale
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-let g:ale_lint_on_enter = 0
 
 " ctags
 set tags=./tags,tags
