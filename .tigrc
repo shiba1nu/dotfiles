@@ -1,0 +1,16 @@
+# 横分割で70%表示
+set vertical-split = no
+set split-view-height = 70%
+
+# main viewの左端にコミットIDを表示する
+set main-view = id date author commit-title:graph=yes,refs=yes
+
+# カーソル下のファイルの差分をvimdiffで表示
+bind diff D !git difftool --tool vimdiff --no-prompt %(commit)^ %(commit) %(file)
+
+# 移動系
+bind generic g        move-first-line
+bind generic G        move-last-line
+bind main    G        move-last-line
+bind generic <Ctrl-F> move-page-down
+bind generic <Ctrl-B> move-page-up
