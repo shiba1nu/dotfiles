@@ -98,6 +98,7 @@ Plug 'vim-denops/denops.vim'
 Plug 'monaqa/dps-dial.vim'
 Plug 'mechatroner/rainbow_csv'
 plug 'airblade/vim-gitgutter'
+Plug 'iberianpig/tig-explorer.vim'
 
 " Plug 'yuki-yano/fern-preview.vim'
 " Plug 'maximbaz/lightline-ale'
@@ -330,6 +331,12 @@ autocmd VimEnter * call AddCycleGroup('php', ['private', 'protected', 'public'])
 " dps-dial
 let g:dps_dial#augends#register#i = [ 'case' ]
 nmap gc "i<Plug>(dps-dial-increment)
+
+" tig-explorer
+" tigを開く
+nnoremap ,t :TigOpenProjectRootDir<CR>
+" 現在のファイルの履歴を見る
+nnoremap ,T :TigOpenCurrentFile<CR>
 
 " 対応する開始/終了タグに移動
 filetype plugin on
