@@ -14,3 +14,6 @@ bind generic G        move-last-line
 bind main    G        move-last-line
 bind generic <Ctrl-F> move-page-down
 bind generic <Ctrl-B> move-page-up
+
+# チェックアウト
+bind refs n ?git checkout -b "%(prompt Enter new branch name: )" %(branch)
