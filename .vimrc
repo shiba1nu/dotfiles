@@ -100,6 +100,7 @@ Plug 'monaqa/dps-dial.vim'
 Plug 'mechatroner/rainbow_csv'
 plug 'airblade/vim-gitgutter'
 Plug 'iberianpig/tig-explorer.vim'
+Plug 'kshenoy/vim-signature'
 
 " Plug 'yuki-yano/fern-preview.vim'
 " Plug 'maximbaz/lightline-ale'
