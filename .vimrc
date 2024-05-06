@@ -13,6 +13,13 @@ set shortmess-=S
 
 syntax on
 
+" Change Indent by filetype
+augroup fileTypeIndent
+  autocmd!
+  autocmd BufNewFile,BufRead *.vue setlocal tabstop=2 shiftwidth=2
+  autocmd BufNewFile,BufRead *.js setlocal tabstop=2 shiftwidth=2
+augroup END
+
 " Command Line Key Map
 cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
