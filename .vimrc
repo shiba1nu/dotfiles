@@ -284,6 +284,8 @@ cabbrev sw StripWhitespace
 cabbrev it IndentLinesToggle
 cabbrev ef EnablePHPFolds
 cabbrev df DisablePHPFolds
+cabbrev lf set ff=unix
+cabbrev utf set fenc=utf-8
 
 " indentLine
 let g:indentLine_char = '|'
