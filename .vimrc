@@ -108,6 +108,7 @@ Plug 'mechatroner/rainbow_csv'
 plug 'airblade/vim-gitgutter'
 Plug 'iberianpig/tig-explorer.vim'
 Plug 'kshenoy/vim-signature'
+Plug 'liuchengxu/vista.vim'
 
 " Plug 'yuki-yano/fern-preview.vim'
 " Plug 'maximbaz/lightline-ale'
@@ -352,3 +353,8 @@ nnoremap ,T :TigOpenCurrentFile<CR>
 " 対応する開始/終了タグに移動
 filetype plugin on
 runtime macros/matchit.vim
+
+" Vista.vim
+let g:vista_sidebar_width = 50
+let g:vista_default_executive = 'coc'
+nnoremap <silent> ,v :<C-u>Vista!!<CR>
