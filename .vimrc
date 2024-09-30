@@ -358,3 +358,7 @@ runtime macros/matchit.vim
 let g:vista_sidebar_width = 50
 let g:vista_default_executive = 'coc'
 nnoremap <silent> ,v :<C-u>Vista!!<CR>
+
+" rainbow_csv
+nnoremap <expr> <C-Up> get(b:, 'rbcsv', 0) == 1 ? ':RainbowCellGoUp<CR>' : '<C-Up>'
+nnoremap <expr> <C-Down> get(b:, 'rbcsv', 0) == 1 ? ':RainbowCellGoDown<CR>' : '<C-Down>'
