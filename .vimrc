@@ -109,7 +109,7 @@ plug 'airblade/vim-gitgutter'
 Plug 'iberianpig/tig-explorer.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'liuchengxu/vista.vim'
-
+Plug 'Shougo/context_filetype.vim'
 " Plug 'yuki-yano/fern-preview.vim'
 " Plug 'maximbaz/lightline-ale'
 " Plug 'SirVer/ultisnips'
