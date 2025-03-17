@@ -18,3 +18,4 @@ bind generic <Ctrl-B> move-page-up
 # チェックアウト
 bind generic F      ?git fetch %(remote)
 bind refs    B      ?git checkout -b "%(prompt Enter branch name: )" %(remote)/%(branch)
+bind refs    R      ?git branch -m %(branch) "%(prompt Enter new branch name: )"
