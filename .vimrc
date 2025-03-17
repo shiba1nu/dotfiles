@@ -252,6 +252,8 @@ nnoremap g] :GitGutterNextHunk<CR>
 nnoremap gh :GitGutterLineHighlightsToggle<CR>
 " gpでカーソル行のdiffを表示する
 nnoremap gp :GitGutterPreviewHunk<CR>
+" guで変更を下に戻す
+nnoremap gu :GitGutterUndoHunk<CR>
 " 記号の色を変更する
 highlight GitGutterAdd ctermfg=green
 highlight GitGutterChange ctermfg=blue
